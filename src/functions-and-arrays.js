@@ -28,6 +28,7 @@ maxOfTwoNumbers(4,5);
     return longest;
   }
   findLongestWord(words);
+
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
@@ -39,6 +40,7 @@ function sumNumbers(num) {
   return sum;
 }
 sumNumbers(numbers);
+
 ///bonus
 
 
@@ -56,6 +58,7 @@ function  averageNumbers(numbersAvg){
   return sum/numbersAvg.length;
 }
 averageNumbers(numbersAvg);
+
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
@@ -73,7 +76,17 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
-
+function uniquifyArray(words){
+  let newNames = [];
+  if (words.length === 0) return null;
+  for (let i=0;i < words.length;i++) {
+    if (newNames.indexOf(words[i]) === -1) {
+      newNames.push(words[i]);
+    }
+  }
+  return newNames;
+}
+uniquifyArray(words);
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
