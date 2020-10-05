@@ -60,7 +60,28 @@ function  averageNumbers(numbersAvg){
 averageNumbers(numbersAvg);
 
 // Level 2: Array of strings
+
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+function averageWordLength(wordsArr)
+{
+  let bword = '';
+  let origen = 0;
+  let sum = 0;
+  let avg = 0;
+  if (wordsArr.length === 0) return null;
+ let oneelement = wordsArr[1].length/wordsArr.length;
+  for (let i = 0; i < wordsArr.length; i++) {
+    if (wordsArr.length > 0){
+      origen = wordsArr[i];
+      origen = bword.length;
+      sum += origen;
+      avg = sum/wordsArr.length;
+    }
+    return avg;
+  }
+}
+averageWordLength(wordsArr);
+console.log(Math.round(averageWordLength(wordsArr)));
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -89,6 +110,17 @@ function uniquifyArray(words){
 uniquifyArray(words);
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+function doesWordExist(wordsFind,word){
+  if (wordsFind.length === 0) return null;
+  //let cuenta = wordsFind.length
+  if (wordsFind.includes(word)){
+    return true;
+}
+else {
+    return false;
+  }
+  }
+doesWordExist(wordsFind,'machinssse') ;
 
 // Iteration #7: Count repetition
 const wordsCount = [
