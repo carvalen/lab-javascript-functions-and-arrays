@@ -2,11 +2,11 @@
 function maxOfTwoNumbers(num1, num2){
   if (num1 > num2){
     console.log(`${num1} "es el mayor"`);
-   return num1;
-   }
+return num1;
+}
   else if (num2 > num1){
-   console.log(`${num2} "es el mayor"`)
-   return num2;
+console.log(`${num2} "es el mayor"`)
+return num2;
   }
   if (num1 === num2) {
     console.log("son iguales");
@@ -62,28 +62,20 @@ averageNumbers(numbersAvg);
 // Level 2: Array of strings
 
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
-function averageWordLength(wordsArr)
-{
-  let bword = '';
-  let origen = 0;
-  let sum = 0;
-  let avg = 0;
+function averageWordLength(wordsArr){
+  let prom = wordsArr.length;
+  
   if (wordsArr.length === 0) return null;
- let oneelement = wordsArr[1].length/wordsArr.length;
+  let totalLength = 0;
   for (let i = 0; i < wordsArr.length; i++) {
-    if (wordsArr.length > 0){
-      origen = wordsArr[i];
-      origen = bword.length;
-      sum += origen;
-      avg = sum/wordsArr.length;
-    }
-    return avg;
+    totalLength += wordsArr[i].length;
   }
+  return totalLength / prom;
 }
 averageWordLength(wordsArr);
-console.log(Math.round(averageWordLength(wordsArr)));
 
 // Iteration #5: Unique arrays
+
 const wordsUnique = [
   'crab',
   'poison',
@@ -108,6 +100,7 @@ function uniquifyArray(words){
   return newNames;
 }
 uniquifyArray(words);
+
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 function doesWordExist(wordsFind,word){
@@ -136,6 +129,16 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+function howManyTimes(words, findwords){
+  var count = 0;
+  for (var i = 0; i < words.length; i++) {
+      if (words[i] === findwords) {
+          count++;
+      }
+  }
+  return count;
+}
+howManyTimes(words, 'matter')
 
 // Iteration #8: Bonus
 
